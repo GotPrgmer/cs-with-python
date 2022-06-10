@@ -19,6 +19,16 @@ def bubble_sort(arr):
                 break
         if button==0:
             break
+def bubble_sort_extreme(arr):
+    end=len(arr)
+    while end>0:
+        last_swap = 0
+        for i in range(end-1):
+            if arr[i]>arr[i+1]:
+                arr[i+1],arr[i]=arr[i],arr[i+1]
+                last_swap= i
+        end=last_swap
+
 
 bubble_sort(array)
 print(array)
